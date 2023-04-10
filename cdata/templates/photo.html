@@ -1,50 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-        <title>Page Title</title>
-        {% load bootstrap5 %}
-        {% bootstrap_css %}
-        {% bootstrap_javascript %}
-  </head>
-  <body>
+{% extends "base.html" %}
+
+  {% block content  %}
+    <p><h5>Update Data </h5></p>
     <div class="container">
       <div class="row">
         <div class="col-4"> 
-          <form action = "" enctype="multipart/form-data" method = "post">
+          <form action = "" enctype="multipart/form-data"  method = "post">
           {% csrf_token %}
           {{form.as_p }}
           <button type="submit" class="btn btn-success">Submit</button>
           </form>
         </div>
-        <div class="col-6">
-          <table class="table table-hover">
-            <thead>
-              <tr class=col-sm-4>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Class</th>
-                <th scope="col">Roll</th>
-                <th scope="col">Photo</th>
-              </tr>
-            </thead>
-            <tbody>
-                {% for f in all_data %}
-              <tr >
-                <th class="table-primary" scope="row">{{forloop.counter}}</th>
-                <td>{{f.name}}</td>
-                <td>{{f.cl}}</td>
-                <td>{{f.roll}}</td>
-                <td><p><img src="{{f.pro_img.url}}" height="100px"> </p></td>
-                
-              </tr>
-              {% endfor %}
-              
-
-
-            </tbody>
-          </table>
-        </div>
+        
       </div>
     </div>
-  </body>
-</html>
+  {% endblock %}
