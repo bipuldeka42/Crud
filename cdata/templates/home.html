@@ -49,35 +49,20 @@
                   <form action = "{%url 'update_data' f.id %}"  method = "post">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-success">Update</button>
-                 
-                  
                   </form>
-                  
-                
-                
-                </td>
+                  </td>
                 <td>
                   <form action = "{%url 'delete' f.id %}"  method = "post">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-danger">Delete</button>
-                 
-                  
                   </form>
-                  
-                  
                 </td>
-                
               </tr>
               {% endfor %}
-              
-    
-    
             </tbody>
           </table>
         </div>
-
-
-        </div>
       </div>
     </div>
-    {% endblock  %}
+  </div>
+{% endblock  %}
