@@ -11,8 +11,8 @@ class StudentForm(forms.ModelForm):
         fields='__all__'
         labels={'cl':'Class','pro_img':'Profile'}
         widgets={'name':forms.TextInput(attrs=
-        {'class':'form-control'})},{'cl':forms.TextInput(attrs=
-        {'class':'formcontrol'})},{'roll':forms.TextInput(attrs=
-        {'class':'form-control'})},{'pro_img':forms.Select(attrs=
-        {'class':'form-control'})},
+        {'class':'form-control'}),'cl':forms.TextInput(attrs=
+        {'class':'form-control'}),'roll':forms.TextInput(attrs=
+        {'class':'form-control'}),
+        }
         
